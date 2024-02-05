@@ -1,55 +1,20 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-class Prodotto {
+    <title>Document</title>
 
-    private $immagine;
-    private $titolo;
-    private $prezzo;
+     <?php
 
-    public function __construct ( $immagine, $titolo, $prezzo){
+        require_once("db.php");
+    ?> 
+</head>
+<body>
 
-        $this -> setImmagine($immagine);
-        $this -> setTitolo($titolo);
-        $this -> setPrezzo($prezzo);
-    }
-
-    public function getImmagine() {
-
-        return $this -> immagine;
-    }
-    public function setImmagine($immagine) {
-
-        $this -> immagine = $immagine;
-    }
-
-    public function getTitolo() {
-
-        return $this -> titolo;
-    }
-    public function setTitolo($titolo) {
-
-        $this -> titolo = $titolo;
-    }
-
-    public function getPrezzo() {
-
-        return $this -> prezzo;
-    }
-    public function setPrezzo($prezzo) {
-
-        $this -> prezzo = $prezzo;
-    }
-}
-
-
-$prodotto1 = new Prodotto("www.gatto.png", "alimenti", 42);
-
-
-// echo "Immagine: " . $prodotto1 -> getImmagine();
-// echo "<br>";
-// echo "Titolo: " . $prodotto1 -> getTitolo();
-// echo "<br>";
-// echo "Prezzo: " . $prodotto1 -> getPrezzoPrezzo();
-
-
-var_dump($prodotto1);
+    <h1>Hello,World!</h1>
+    
+</body>
+</html>
