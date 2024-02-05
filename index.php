@@ -14,7 +14,65 @@
 </head>
 <body>
 
-    <h1>Hello,World!</h1>
+    <h1 class="text-center mb-5">Shop</h1>
+
+    <h2 class="text-center mb-4">
+        <?php
+        echo $prodottoCane1 -> getName();
+        ?>
+    </h2>
+
+    <ul class="d-flex justify-content-around mb-5">
+        <?php 
+        
+        foreach ($cani as $cane){ 
+        
+        ?>
+
+        <li>
+            <?php
+               echo "Immagine: " .$cane -> getImmagine();
+               echo "<br>";
+               echo  $cane -> getTitolo();
+               echo "<br>";
+               echo  "Prezzo: " . $cane -> getPrezzo() . "€";
+            ?>
+        </li>
+
+        <?php
+        }
+        ?>
+    </ul>
+
+    <h2 class="text-center mb-4">
+        <?php
+        echo $prodottoGatto1 -> getName();
+        ?>
+    </h2>
+
+    <ul class="d-flex justify-content-around">
+        <?php 
+        
+        foreach ($gatti as $gatto){ 
+        
+        ?>
+
+        <li>
+            <?php
+               echo "Immagine: " .$gatto -> getImmagine();
+               echo "<br>";
+               echo  $gatto -> getTitolo();
+               echo "<br>";
+               echo  "Prezzo: " . $gatto -> getPrezzo() . "€";
+            ?>
+        </li>
+
+        <?php
+        }
+        ?>
+    </ul>
+
+
     
 </body>
 </html>

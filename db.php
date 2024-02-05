@@ -69,9 +69,9 @@ class Genere extends Prodotto{
 }
 
 
-$prodottoGatto1 = new Genere("www.crocchette.png", "Crocchette", 10, "gatto");
-$prodottoGatto2 = new Genere("www.pollo.png", "Pollo", 10, "gatto");
-$prodottoGatto3 = new Genere("www.pesce.png", "Pesce", 10, "gatto");
+$prodottoGatto1 = new Genere("www.crocchette.png", "Crocchette", 10, "Gatto");
+$prodottoGatto2 = new Genere("www.pollo.png", "Pollo", 10, "Gatto");
+$prodottoGatto3 = new Genere("www.pesce.png", "Pesce", 10, "Gatto");
 
 
 $gatti = [$prodottoGatto1, $prodottoGatto2, $prodottoGatto3];
@@ -86,15 +86,15 @@ $cani = [$prodottoCane1, $prodottoCane2, $prodottoCane3];
 
 
 
-var_dump($prodottoCane1);
+// var_dump($prodottoCane1);
 
-echo "<br>";
-echo "<br>";
-echo "<br>";
+// echo "<br>";
+// echo "<br>";
+// echo "<br>";
 
 
-echo "Immagine: " . $prodottoCane1 -> getImmagine();
-echo "<br>";
-echo "Titolo: " . $prodottoCane1 -> getTitolo();
-echo "<br>";
-echo "Prezzo: " . $prodottoCane1 -> getPrezzo();
+// echo "Immagine: " . $prodottoCane1 -> getImmagine();
+// echo "<br>";
+// echo "Titolo: " . $prodottoCane1 -> getTitolo();
+// echo "<br>";
+// echo "Prezzo: " . $prodottoCane1 -> getPrezzo();
