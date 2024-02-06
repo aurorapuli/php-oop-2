@@ -9,33 +9,34 @@
 
      <?php
 
-        require_once("db.php");
+          require_once(__DIR__ . "/db.php");
     ?> 
 </head>
 <body>
 
     <h1 class="text-center mb-5">Shop</h1>
 
-    <h2 class="text-center mb-4">
-        <?php
-        echo $prodottoCane1 -> getName();
-        ?>
-    </h2>
 
     <ul class="d-flex justify-content-around mb-5">
         <?php 
         
-        foreach ($cani as $cane){ 
+        foreach ($foods as $food){ 
         
         ?>
 
         <li>
             <?php
-               echo "Immagine: " .$cane -> getImmagine();
+               echo $food -> getImmagine();
                echo "<br>";
-               echo  $cane -> getTitolo();
+               echo  $food -> getTitolo();
                echo "<br>";
-               echo  "Prezzo: " . $cane -> getPrezzo() . "€";
+               echo  $food -> getPrezzo() . "€";
+               echo "<br>";
+               echo "Genere: " . $food -> getGenere();
+               echo "<br>";
+               echo "Data di scadenza: " . $food -> getExpireDate();
+
+            
             ?>
         </li>
 
@@ -44,26 +45,24 @@
         ?>
     </ul>
 
-    <h2 class="text-center mb-4">
-        <?php
-        echo $prodottoGatto1 -> getName();
-        ?>
-    </h2>
-
     <ul class="d-flex justify-content-around">
         <?php 
         
-        foreach ($gatti as $gatto){ 
+        foreach ($accessori as $accessorio){ 
         
         ?>
 
         <li>
             <?php
-               echo "Immagine: " .$gatto -> getImmagine();
-               echo "<br>";
-               echo  $gatto -> getTitolo();
-               echo "<br>";
-               echo  "Prezzo: " . $gatto -> getPrezzo() . "€";
+                echo $accessorio -> getImmagine();
+                echo "<br>";
+                echo  $accessorio -> getTitolo();
+                echo "<br>";
+                echo  $accessorio -> getPrezzo() . "€";
+                echo "<br>";
+                echo "Genere: " . $accessorio -> getGenere();
+                echo "<br>";
+                echo "Tipologia: " . $accessorio -> getTipology();
             ?>
         </li>
 
