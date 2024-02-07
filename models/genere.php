@@ -5,7 +5,7 @@ class Genere{
 
     private $name;
 
-    public function __construct ( $name){
+    public function __construct ($name){
 
         $this -> setName($name);
     }
