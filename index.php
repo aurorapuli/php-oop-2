@@ -10,6 +10,18 @@
      <?php
 
           require_once(__DIR__ . "/db.php");
+
+          try {
+
+            $test_prod = new Prodotto(
+                 "https://shop-cdn-m.mediazs.com/bilder/9/400/26635_pla_meradog_puppyknochen_10kg_9.jpg", "Te" ,50,$gen_dog, 20
+            );
+        } catch (Exception $e) {
+
+            echo "Impossibile creare prodotto di test: " . $e -> getMessage();
+        }
+
+        die();
     ?> 
 </head>
 <body>

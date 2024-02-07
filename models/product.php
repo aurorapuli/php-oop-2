@@ -9,13 +9,17 @@ class Prodotto {
 
     private $genere;
 
-    public function __construct ( $immagine, $titolo, $prezzo, Genere $genere){
+    use Discount;
+
+
+    public function __construct ( $immagine, $titolo, $prezzo, Genere $genere, $discount){
 
         $this -> setImmagine($immagine);
         $this -> setTitolo($titolo);
         $this -> setPrezzo($prezzo);
 
         $this -> setGenere($genere);
+        $this -> setDiscount($discount);
     }
 
     public function getImmagine() {
@@ -33,6 +37,10 @@ class Prodotto {
     }
     public function setTitolo($titolo) {
 
+
+        if (!is_string($titolo) || strlen($titolo) < 3) 
+        throw new Exception("'$titolo' is not valid title");
+
         $this -> titolo = $titolo;
     }
 
@@ -43,6 +51,11 @@ class Prodotto {
     public function setPrezzo($prezzo) {
 
         $this -> prezzo = $prezzo;
+    }
+
+    public function getFullPrezzo() {
+
+        return $this -> getPrezzo() / 100 * (100 - $this -> getDiscount());
     }
 
     public function getGenere() {
