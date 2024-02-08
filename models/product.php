@@ -1,5 +1,7 @@
 <?php
 
+require_once(__DIR__ . "/discountTrait.php");
+
 
 class Prodotto {
 
@@ -39,6 +41,7 @@ class Prodotto {
 
 
         if (!is_string($titolo) || strlen($titolo) < 3) 
+
         throw new Exception("'$titolo' is not valid title");
 
         $this -> titolo = $titolo;
